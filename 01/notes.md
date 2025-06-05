@@ -1,7 +1,4 @@
-# Lesson 1 
-
-[[YT](https://www.youtube.com/watch?v=HjXBXBgfKyk)]
-
+# Lesson 1
 
 The file [hello_world.c](./hello_world.c) is a traditional hello-world program.
 
@@ -61,3 +58,6 @@ Useful commands:
 - `file` can determine file type (an [ELF](https://4zm.org/2024/12/25/a-simple-elf.html) binary in this case) beyond other info (e.g. satically/dynamically linked)
 - `strip` removes debugging symbols and other metadata from the binary
 - `hexdump` can be used to investigate what is inside a binary (more [here](https://opensource.com/article/19/8/dig-binary-files-hexdump)).
+
+References:
+- [Lesson 1](https://www.youtube.com/watch?v=HjXBXBgfKyk)
