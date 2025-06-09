@@ -4,7 +4,7 @@ The hello-world program introduced in the previous lesson shows how C enforces t
 
 The `gcc` options `-Wextra` (which superseds `-W`) and `-Wall` enables a number of warning flags that can be helpful to spot different cases of improper use of the C language.
 
-For example, they can detect common errors like the one in the modified hello-word [program](./hello_word_warn.c):
+For example, they can detect common errors like the one in the modified hello-word [program](./hello_world.c):
 ```bash
 $ gcc -Wextra -Wall ./hello_word_warn.c 
 ./hello_word_warn.c: In function ‘main’:
