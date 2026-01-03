@@ -1,6 +1,10 @@
 #include "stdio.h"
 
-void incr(int *p) { *p = *p + 1; }
+void incr(int *p) {
+  *p = *p + 1;
+  // or, equivantely:
+  // p[0]= p[0] +1;
+}
 
 int main(void) {
 
@@ -8,6 +12,8 @@ int main(void) {
   printf("%d\n", x);
   // this way of declaring a pointer is preferable over `int* x`
   // since `int* x, z` would declare only the former as a pointer
+  // the type of a pointer refers to the type of its value,
+  // pointers are always 64 bits (8 bytes) long on modern machines
   int *y = 0;
   // prints nil memory address
   // equal to:
