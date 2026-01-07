@@ -1,12 +1,10 @@
-# Lesson 2
-
 The hello-world program introduced in the previous lesson shows how C enforces the type expression in each declaration.
 
 The `gcc` options `-Wextra` (which superseds `-W`) and `-Wall` enables a number of warning flags that can be helpful to spot different cases of improper use of the C language.
 
 For example, they can detect common errors like the one in the modified hello-word [program](./hello_world.c):
 ```bash
-$ gcc -Wextra -Wall ./hello_word_warn.c 
+$ gcc -Wextra -Wall ./hello_word_warn.c
 ./hello_word_warn.c: In function ‘main’:
 ./hello_word_warn.c:8:33: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
     8 |         printf("Hello World %d %d\n", sum(10,20));
@@ -17,17 +15,17 @@ $ gcc -Wextra -Wall ./hello_word_warn.c
 
 This kind of bugs are particularly nasty since the `gcc` compiler will nonetheless compile the program into a runnable binary that could cause undefined behaviour:
 ```
-$ ./a.out 
+$ ./a.out
 Hello World 30 10
 ```
 
-The second unwanted value may change across different builds and it could even make the program to crash. 
+The second unwanted value may change across different builds and it could even make the program to crash.
 
 > note: modern compilers (e.g. `go` compiler) does not allow you to incur in such errors.
 
 The lifetime of a local variable is bound to the function's scope which it was declared into. Accessing to such a variable through a pointer outside the function scope will result in an error.
 
-In C there is no garbage collector: to have a good mental model of how memory is managed in C, it can be helpful to understand what happens inside a microprocessor. Indeed local variables can be better understood when interpreted as the values stored in the 'registries', small memory areas manipulated by the processor with a special set of instructions that can be way more quick than main memory. 
+In C there is no garbage collector: to have a good mental model of how memory is managed in C, it can be helpful to understand what happens inside a microprocessor. Indeed local variables can be better understood when interpreted as the values stored in the 'registries', small memory areas manipulated by the processor with a special set of instructions that can be way more quick than main memory.
 
 This can be seen in action in the following assembly program written for the [6502](https://en.wikipedia.org/wiki/MOS_Technology_6502) that can be run on the [Easy 6502](https://skilldrick.github.io/easy6502/) booksite:
 ```assembly
@@ -36,13 +34,13 @@ START:              ; entrypoint
   JSR FILL_FIVE     ; jump to func FILL_FIVE
   BRK               ; break
 
-FILL_FIVE:          
+FILL_FIVE:
   TAX               ; move value in A to X
   BEQ DONE          ; if the value is equal to 0, exit
   LDY #$00          ; load 0 into Y
   LDA #$05          ; load 5 into A
 LOOP:
-  STA $0200,Y       ; store the value in A at the position 200 (hex) + Y (offset) 
+  STA $0200,Y       ; store the value in A at the position 200 (hex) + Y (offset)
   INY               ; increment Y, which is the cursor offset
   DEX               ; decrease X, wich is the loop index
   BNE LOOP          ; if not 0 continue with loop
@@ -56,7 +54,7 @@ Note as the value in A is overridden in this small program, but only after movin
 
 Similarly, in C the variables are stored in the stack when passing from a function's to scope to another func's scope, to be then restored when going back to the former.
 
-A stack is a piece of computer memory organized in small chuncks when variables get stored. The stack pointer (SP) keeps a reference to the last inserted or removed variable with the push and pop instructions. 
+A stack is a piece of computer memory organized in small chuncks when variables get stored. The stack pointer (SP) keeps a reference to the last inserted or removed variable with the push and pop instructions.
 The base pointer (BP) points to the base of a stack frame during function calls, instead.
 The program counter (PC) registers keeps track of the execution path so that when `ret` is used the program is able to get back to the previous function call.
 
@@ -137,14 +135,13 @@ The return value of the `main` function is the exit code of the program:
 This is useful in scripting where exit codes are used in boolean conditions to short circuit a long expression (e.g. in `./a.out && ls`, the second command won't be executed if the former fails).
 
 
-> side note: in bash, zsh and other shells, `!<cmd>` re-executes the last occurence of the command in shell history, while `!!` re-executes the very last command in shell history (useful if you just forgot to prefix it with `sudo` since you can now do `sudo !!`). 
+> side note: in bash, zsh and other shells, `!<cmd>` re-executes the last occurence of the command in shell history, while `!!` re-executes the very last command in shell history (useful if you just forgot to prefix it with `sudo` since you can now do `sudo !!`).
 
 
 ---
 
 References:
 
-- [Lesson 2](https://www.youtube.com/watch?v=Z84vlG1RRtg)
 - [Appendix to Lesson 2](https://www.youtube.com/watch?v=r6mU_IHXEps&t=138s)
 - [Reading C type declarations](http://www.unixwiz.net/techtips/reading-cdecl.html)
 - [Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)

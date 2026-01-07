@@ -1,5 +1,3 @@
-# Lesson 3
-
 A global variable can be referenced (and manipulated) in the scope of any function.
 A static variable can be referenced (and manipulated) **only** in the scope of the func it was declared to at each func call. As suchm a static variable is not thread-safe and it should be protected by a mutex, for example.
 
@@ -25,6 +23,5 @@ Guarantess against overflow exist only for `unsigned integers`, for signed inter
 ---
 
 References:
-- [Lesson 3](https://www.youtube.com/watch?v=mw4gUqsGPZw)
 - [Onboarding floating-point](https://www.altdevarts.com/p/onboarding-floating-point)
 - [Ascii Table](https://theasciicode.com.ar/)

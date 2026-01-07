@@ -1,5 +1,3 @@
-# Lesson 6
-
 Curly braces are not necessary for single statements.
 
 Curly braces denote a 'block'. Blocks can exist also outside a control statement like 'if'.
@@ -46,9 +44,3 @@ FE48-FD08
 ```
 
 This is similar to what functional programming does.
-
----
-
-References:
-
-- [Lesson 6](https://www.youtube.com/watch?v=lc7aYXNl1T8)

@@ -1,10 +1,8 @@
-# Lesson 5
-
 Chars and shorts get promoted to int when passed to printf.
 
 A char can be declared as single character between apices (see, `man ascii`)
 
-> Note: with `vi`, you can pass raw keystrokes by typing `ctrl-v` when using insert mode. 
+> Note: with `vi`, you can pass raw keystrokes by typing `ctrl-v` when using insert mode.
 
 A string is just an array of chars. It must be terminated by a zero, the null terminator.
 
@@ -18,6 +16,5 @@ Omitting the null terminator can cause UB printing gibberish chars.
 
 References:
 
-- [Lesson 5](https://www.youtube.com/watch?v=SWWHqgSwQFw)
-- [ascii(7)](https://www.man7.org/linux/man-pages/man7/ascii.7.html) 
+- [ascii(7)](https://www.man7.org/linux/man-pages/man7/ascii.7.html)
 

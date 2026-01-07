@@ -1,5 +1,3 @@
-# Lesson 1
-
 The file [hello_world.c](./hello_world.c) is a traditional hello-world program.
 
 > Fun Fact: it was indeed the [K&R book](https://en.wikipedia.org/wiki/The_C_Programming_Language) to establish this tradition in the programming community.
@@ -13,7 +11,7 @@ $ gcc hello_world.c
 
 By default, the compiler will generate a binary named `a.out`:
 ```bash
-$ ./a.out 
+$ ./a.out
 Hello World
 ```
 
@@ -36,7 +34,7 @@ If the prepocessor directive was substituded by the func signature (*prototype*)
 
 To view the func docs, do as follows:
 ```bash
-$ man 3 puts 
+$ man 3 puts
 ```
 
 The preprocessor can even target other C files. You can verify it by using an include directive at the printf line to replace it with the content of another local file:
@@ -58,6 +56,3 @@ Useful commands:
 - `file` can determine file type (an [ELF](https://4zm.org/2024/12/25/a-simple-elf.html) binary in this case) beyond other info (e.g. satically/dynamically linked)
 - `strip` removes debugging symbols and other metadata from the binary
 - `hexdump` can be used to investigate what is inside a binary (more [here](https://opensource.com/article/19/8/dig-binary-files-hexdump)).
-
-References:
-- [Lesson 1](https://www.youtube.com/watch?v=HjXBXBgfKyk)

@@ -1,5 +1,3 @@
-# Lesson 4
-
 C numeric types are not consisent across different architecture. The C language was conceived to be portable to virtually all the systems available in the '60 and the specifications does not dictate how many bits a given type uses (and so the range of values it can assume).
 
 The size of a type can be tested with `sizeof`.
@@ -21,7 +19,7 @@ clear | hexdump -C
 0000000b
 ```
 
-`\033` in octale or `\1b` in hexadecimal marks the beginning of a ANSI escape code: type `man ascii` to consult an ascii table. 
+`\033` in octale or `\1b` in hexadecimal marks the beginning of a ANSI escape code: type `man ascii` to consult an ascii table.
 
 The `printf` func is optimized to delay the flush to disk by keeping objects in memory.
 
@@ -30,5 +28,4 @@ Indentation is not crucial for a C program.
 ---
 
 References:
-- [Lesson 4](https://www.youtube.com/watch?v=YNsXyasn4R4)
 - [Want to create a TUI application? - The Basics of "Uncooked" Terminal IO](https://zig.news/lhp/want-to-create-a-tui-application-the-basics-of-uncooked-terminal-io-17gm)
