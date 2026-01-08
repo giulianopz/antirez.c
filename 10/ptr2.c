@@ -23,7 +23,7 @@ int main(void)
   // it does not affect the pointer size
   short *p2 = (short *)mystr2;
   // it prints out 16705, i.e. the decimal value of the hexadecimal representation of 'AA':
-  // 65 is the ASCII code (decimal value) for 'A'
+  // 65 is the ASCII code (decimal value) for 'A', see man ascii
   // (65)₁₀ = (41)₁₆ -> 0x4141 = (4141)₁₆ = (16705)₁₀
   // because:
   // (4141)₁₆ = (4 × 16³) + (1 × 16²) + (4 × 16¹) + (1 × 16⁰) = (16705)₁₀
