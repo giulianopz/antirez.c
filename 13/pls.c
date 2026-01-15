@@ -58,8 +58,8 @@ int main(void) {
   // this chunck of memory would have been freed anyway since we are exiting the
   // program
 
-  // It ould be heplful to add other 4 bytes in the string orefix, to count its
-  // references, nut it would be also cubersome.
+  // It ould be heplful to add other 4 bytes in the string prefix to count its
+  // references. That would make memory managment semi-automatic but it would be also cubersome to maintain.
   // A common solutiom to this issue is to use a `struct` .
   return 0;
 }
